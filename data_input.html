@@ -1,9 +1,144 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: white;
+                font-family: Arial, sans-serif;
+            }
 
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                padding: 20px;
+                border: 2px solid #ccc;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            }
+
+            /* Label text */
+            label {
+                font-size: 20px;
+                font-weight: bold;
+                margin-right: 10px;
+            }
+
+            /* Dropdown (select element) */
+            select {
+                text-align: left;
+                width: 250px;
+                font-size: 18px;
+                padding: 10px 15px;
+                border-radius: 6px;
+                border: 2px solid #007BFF;
+                background-color: white;
+                cursor: pointer;
+                transition: border-color 0.7s, box-shadow 0.7s;
+                box-sizing: border-box;
+            }
+
+            /* Focus effect when clicking the dropdown */
+            select:focus {
+                border-color: #0056b3;
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.6);
+                outline: none;
+            }
+
+            /* Optional: style the submit button */
+            button {
+                margin-left: 5px;
+                padding: 10px 20px;
+                font-size: 18px;
+                background-color: #007BFF;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.7s;
+            }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+
+            .logout-link {
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                font-size: 18px;
+                font-weight: bold;
+                color: #009dff;
+                text-decoration: none;
+                text-decoration: underline;
+                transition: color 0.7s;
+            }
+
+            .logout-link:hover {
+                color: #0056b3;
+            }
+        </style>
     </head>
     <body>
-        
+        <a href="#" class="logout-link">Log Out</a>
+
+        <form>
+            <div>
+                <label for="key">Select Key:</label><br>
+                <select name="key" id="key">
+                    <option value="">Choose a Key</option>
+                    <option value="34">FL 03/04</option>
+                    <option value="56">FL 05/06</option>
+                    <option value="78">FL 07/08</option>
+                    <option value="910">FL 09/10</option>
+                    <option value="1112">FL 11/12</option>
+                    <option value="1415">FL 14/15</option>
+                    <option value="1617">FL 16/17</option>
+                    <option value="1819">FL 18/19</option>
+                    <option value="2021">FL 20/21</option>
+                    <option value="2223">FL 22/23</option>
+                    <option value="g3">G3 - Master</option>
+                    <option value="amikey">7th Floor lounge</option>
+                    <option value="t1">Tour 1</option>
+                    <option value="t2">Tour 2</option>
+
+                </select>
+            </div>
+
+            <div>
+                <label for="ca">Select CA:</label><br>
+                <select id="ca" name="ca">
+                    <option value="">Select Name</option>
+                    <option value="sadnan">Sadnan</option>
+                    <option value="tumisang">Tumisang</option>
+                    <option value="leatile">Leatile</option>
+                    <option value="baker">Baker</option>
+                    <option value="megan">Megan</option>
+                    <option value="grabielle">Grabielle</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="reason">Reason:</label><br>
+                <select id="reason" name="reason">
+                    <option value="">Select Reason</option>
+                    <option value="lo">Lock Out</option>
+                    <option value="tour">Tour</option>
+                    <option value="od">Open Door</option>
+                    <option value="ami">Aminity</option>
+                    <option value="clean">Cleaning</option>
+                </select>
+            </div>
+
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
     </body>
 </html>
