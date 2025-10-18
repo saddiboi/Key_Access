@@ -43,9 +43,45 @@
                 background-color: rgb(22, 99, 2);
                 transition: background-color 0.7s;
             }
+
+            .checked-keys {
+                background-color: rgb(1, 109, 203);
+                font-size: 20px;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                height: 50px;
+                width: 405px;
+                cursor: pointer;
+                font-weight: bold;
+                margin-top: 10px;
+            }
+
+            .checked-keys:hover{
+                background-color: rgb(1, 91, 169);
+                transition: background-color 0.7s;
+            }
+
+            .logout-link {
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                font-size: 18px;
+                font-weight: bold;
+                color: #009dff;
+                text-decoration: none;
+                text-decoration: underline;
+                transition: color 0.3s;
+            }
+
+            .logout-link:hover {
+                color: #0056b3;
+            }
         </style>
     </head>
     <body>
+        <a href="#" class="logout-link">Log Out</a>
+
         <div>
             <button class="button_checkout">
                 Check Out
@@ -54,6 +90,11 @@
                 Check In
             </button>
 
+            <div>
+                <button class="checked-keys">
+                    Checked Out Keys
+                </button>
+            </div>
         </div>
     </body>
 </html>
